@@ -22,7 +22,7 @@ jobs:
         go-version: '1.22'
 
     - name: Install Ubuntu depends
-      run: sudo apt install build-essential make cmake ninja-build gcc pkg-config libsecret-1-dev qt6-default
+      run: sudo apt install build-essential make cmake ninja-build gcc pkg-config libsecret-1-dev qt6-base-dev
 
     - name: Print working directory
       run: pwd
