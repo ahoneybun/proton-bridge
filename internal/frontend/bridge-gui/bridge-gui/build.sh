@@ -78,6 +78,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     ${VCPKG_EXE} install sentry-native:x64-osx-min-10-15 grpc:x64-osx-min-10-15 --overlay-triplets=vcpkg/triplets --clean-after-build
     check_exit "Failed installing gRPC for macOS / Intel x64"
 elif [[ "$OSTYPE" == "linux"* ]]; then
+    ${VCPKG_EXE} install sentry-native:arm64-linux grpc:arm64-linux --clean-after-build
+    check_exit "Failed installing gRPC for Linux / Intel arm64"
     ${VCPKG_EXE} install sentry-native:x64-linux grpc:x64-linux --clean-after-build
     check_exit "Failed installing gRPC for Linux / Intel x64"
 else
