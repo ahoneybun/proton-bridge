@@ -24,8 +24,10 @@ jobs:
     - name: Install Ubuntu depends
       run: sudo apt install build-essential make cmake ninja-build gcc pkg-config libsecret-1-dev qt6-base-dev qmake6
 
-    - name: Set variables for arm
+    - name: Set variable for arm
       run: export VCPKG_FORCE_SYSTEM_BINARIES=arm
+
+    - name: Set variable to force system arch
       run: export VCPKG_FORCE_SYSTEM_BINARIES=1
 
     - name: Build CLI
