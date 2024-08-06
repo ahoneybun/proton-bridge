@@ -32,3 +32,6 @@ jobs:
 
     - name: Build CLI
       run: make build-nogui
+
+    - name: Buidl GUI
+      run: make build
